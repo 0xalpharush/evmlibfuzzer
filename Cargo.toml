@@ -1,0 +1,19 @@
+[package]
+name = "evmlibfuzzer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-primitives = { version = "0.8.21", features = ["arbitrary"] }
+alloy-sol-types = "0.8.21"
+arbitrary = { version = "1.4.1", features = ["derive"] }
+bincode = "1.3.3"
+libfuzzer-sys = "0.4.9"
+rand = "0.9.0"
+revm = { git = "https://github.com/bluealloy/revm.git", rev = "c12a95e85f5e495c19170f6909293cd2b1c26337", features = ["std"] }
+revm-database = { git = "https://github.com/bluealloy/revm.git", rev = "c12a95e85f5e495c19170f6909293cd2b1c26337", features = ["std"] }
+serde = "1.0.217"
+
+
+[dependencies.foundry-contracts ]
+path = "./contract-bindings"
